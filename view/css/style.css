@@ -510,6 +510,7 @@ span {
     }
 }
 
+/* Icon Whatsapp */
 
 .whatsapp {
     position: fixed;
@@ -523,4 +524,18 @@ span {
     text-align: center;
     font-size: 30px;
     z-index: 10000;
+}
+
+/* Maprs */
+
+.maps{
+    text-align: center;
+}
+
+.maps p{
+    text-align: left;
+}
+
+.maps iframe{
+    max-width: 100%;
 }
