@@ -36,6 +36,7 @@ body {
     line-height: 2;
     background-color: var(--blanco);
     font-family: var(--font-family1);
+    overflow-x: hidden ;
 }
 
 .contenedor {
@@ -84,6 +85,23 @@ span {
 }
 
 /* Utilidades */
+
+.btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    border-radius: 5px;
+    transition: .5s ease;
+}
+
+.btn-primary:hover{
+    background-color: var(--black-light);
+    transition: .5s ease;
+}
 
 /* Header */
 
@@ -138,11 +156,13 @@ span {
 
 .nav-links.open{
     display: flex;
+    margin: 0 0 1rem 0;
 }
 
 .nav-links li {
     position: relative;
     padding: 0 1rem;
+    border: 1px solid transparent;
 }
 
 .nav-links li:hover{
@@ -155,6 +175,10 @@ span {
     color: var(--black-light);
     display: flex;
     align-items: center;
+}
+
+.nav-links .fa-user {
+    font-size: 2.5rem;
 }
 
 .dropdown-content {
@@ -250,7 +274,7 @@ span {
     justify-content: space-between;
     width: 24px;
     height: 18px;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .line {
@@ -285,4 +309,38 @@ span {
     .menu{
         display: flex;
     }
+}
+
+
+/* HERO */
+
+.hero{
+    background-image: url('../img/Banner.jpg');
+    min-height: 100px;
+    height: 600px;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center top;
+}
+
+.hero .hero__content{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .hero__content .hero__contenido{
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 100%;
+    width: 800px;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.hero .hero__content .hero__contenido p{
+    margin: 0;
 }
