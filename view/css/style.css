@@ -539,3 +539,22 @@ span {
 .maps iframe{
     max-width: 100%;
 }
+
+.maps .maps__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(min-width: 768px){
+    .maps .maps__content{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .maps .maps__content img{
+        object-fit: cover;
+        height: 450px;
+        width: 100%;
+    }
+}

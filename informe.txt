@@ -1,0 +1,64 @@
+Informe del Proyecto - Sitio Web para Deposito De Flejes San Martin LG SAS
+
+Fecha: [Fecha actual]
+
+Objetivo del Proyecto:
+El objetivo de este proyecto es crear un sitio web profesional y estético para Deposito De Flejes San Martin LG SAS. El sitio web debe combinar funcionalidades de blog, e-commerce y galería, destacando los trabajos realizados por la empresa, los servicios ofrecidos y la venta de productos de construcción. Además, se busca que el sitio web sea accesible, rápido y adaptable a diferentes dispositivos.
+
+Requisitos y Funcionalidades:
+Diseño Profesional y Estético:
+
+Utilizar los colores del logotipo de Deposito De Flejes San Martin LG SAS para mantener una identidad visual consistente.
+Crear un diseño atractivo y profesional que refleje la calidad de las ornamentaciones y servicios ofrecidos por la empresa.
+Navegación:
+
+Barra de navegación con las siguientes secciones: Inicio, Nosotros (con subcategorías de Quiénes somos, Nuestros servicios y Nuestros productos), Galería, Blog (con subcategorías de Publicaciones recientes y Categorías de blog), Tienda (con subcategorías de Todos los productos, Categorías de productos, Carrito de compras y Finalizar compra), Iniciar sesión (para usuarios y administradores) y Contacto.
+Funcionalidad de Busqueda:
+
+Implementar una función de búsqueda en todo el sitio web para permitir a los usuarios buscar información en todas las secciones.
+Las funciones de búsqueda en el e-commerce y el blog deben buscar solo dentro de sus respectivas áreas.
+Blog:
+
+Mostrar publicaciones recientes y categorías de blog en la sección correspondiente.
+Permitir a los usuarios dar una reacción de "corazón" a las publicaciones del blog.
+E-commerce:
+
+Mostrar todos los productos y categorías de productos en la sección de la tienda.
+Implementar un carrito de compras que permita a los usuarios agregar productos y especificar la cantidad deseada.
+Agregar un botón para finalizar la compra que envíe la información a WhatsApp para realizar la compra.
+Gestión de Contenido:
+
+Implementar un sistema de inicio de sesión que permita al usuario administrador publicar nuevos productos y agregar nuevas imágenes en el blog, sin necesidad de conocimientos de programación.
+Adaptabilidad y Velocidad:
+
+Diseñar el sitio web para que sea adaptable a diferentes dispositivos, asegurando una experiencia de usuario óptima en teléfonos móviles, tablets y computadoras.
+Optimizar el rendimiento del sitio web para una carga rápida y una experiencia de navegación fluida.
+Innovaciones:
+
+Implementar un chatbot para permitir a los usuarios obtener información sobre el sitio web.
+Personalizar el estilo del input y del botón del carrito de compras para que sean más innovadores y únicos.
+Estructura de Navegación Propuesta:
+Inicio
+Nosotros
+Quiénes somos
+Nuestros servicios
+Nuestros productos
+Galería
+Blog
+Publicaciones recientes
+Categorías de blog
+Tienda
+Todos los productos
+Categorías de productos
+Carrito de compras
+Finalizar compra
+Iniciar sesión (para usuarios y administradores)
+Contacto
+Conclusiones:
+El proyecto del sitio web para Deposito De Flejes San Martin LG SAS tiene como objetivo crear una presencia en línea profesional y estética, destacando los trabajos realizados por la empresa, los servicios ofrecidos y la venta de productos de construcción. Se ha definido una estructura de navegación clara y se han identificado las funcionalidades y requisitos necesarios para cumplir con los objetivos del proyecto. Además, se han considerado aspectos importantes como la adaptabilidad, la velocidad de carga y la implementación de innovaciones como un chatbot.
+
+El siguiente paso será proceder con la implementación del diseño y las funcionalidades propuestas, utilizando las tecnologías requeridas como HTML, CSS, JavaScript, PHP y MySQL. Se realizarán pruebas exhaustivas para garantizar el correcto funcionamiento del sitio web en diferentes dispositivos y navegadores.
+
+El equipo de desarrollo estará a cargo de llevar a cabo el proyecto, cumpliendo con los plazos y requerimientos establecidos. Se mantendrá una comunicación constante con el cliente para asegurar que sus expectativas se vean reflejadas en el resultado final.
+
+¡Estamos emocionados de trabajar en este proyecto y llevar el sitio web de Deposito De Flejes San Martin LG SAS al siguiente nivel!
