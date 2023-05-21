@@ -133,6 +133,18 @@ span {
     flex-direction: column;
 }
 
+
+.navegation .img-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegation img {
+    width: 50%;
+    padding: 1rem;
+}
+
 @media(min-width: 768px){
 
     .header{
@@ -144,7 +156,10 @@ span {
         align-items: center;
     }
     .navegation img {
-        width: 22%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
     }
 }
 
