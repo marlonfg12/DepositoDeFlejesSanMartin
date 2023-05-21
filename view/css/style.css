@@ -522,11 +522,11 @@ span {
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
     z-index: 10000;
 }
 
-/* Maprs */
+/* Maps */
 
 .maps{
     text-align: center;
