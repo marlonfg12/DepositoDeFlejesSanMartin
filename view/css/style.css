@@ -358,6 +358,10 @@ padding: 1rem;
     background-position: center top;
 }
 
+.hero.hero-min {
+    height: 10rem;
+}
+
 .hero .hero__content{
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -368,11 +372,26 @@ padding: 1rem;
     text-align: center;
 }
 
+.hero.hero.hero-min .hero__content{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .hero .hero__content .hero__contenido{
     background-color: rgba(255, 255, 255, 0.5);
     max-width: 100%;
     width: 800px;
     font-weight: bold;
+    padding: 2rem;
+}
+
+.hero.hero-min .hero__content .hero__contenido{
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.hero.hero-min .hero__content .hero__contenido h3{
+    margin: 0;
     padding: 2rem;
 }
 
@@ -589,3 +608,7 @@ padding: 1rem;
         width: 100%;
     }
 }
+
+
+/*** about.html ***/
+
