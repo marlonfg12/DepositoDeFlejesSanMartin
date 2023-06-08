@@ -734,3 +734,28 @@ padding: 1rem;
 
 }
 
+/*** Gallery ***/
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+@media(min-width: 768px){
+    .gallery{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(min-width: 1440px){
+    .gallery{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.picture img{
+    height: 100%;
+    object-fit: cover;
+}
