@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fullscreenContainer.appendChild(fullscreenImage);
 
     // Agregar el contenedor a la página
-    document.body.appendChild(fullscreenContainer);
+    document.body.appendChild(fullscreenContainer); 
 
     // Remover la imagen en pantalla completa al hacer clic en ella
     fullscreenContainer.addEventListener('click', function() {
