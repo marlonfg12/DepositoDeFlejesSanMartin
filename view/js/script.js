@@ -1,43 +1,44 @@
-const dropdowns = document.querySelectorAll('.dropdown');
+const dropdowns = document.querySelectorAll(".dropdown");
 
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', () => {
-    dropdowns.forEach(otherDropdown => {
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener("click", () => {
+    dropdowns.forEach((otherDropdown) => {
       if (otherDropdown !== dropdown) {
-        otherDropdown.classList.remove('active');
+        otherDropdown.classList.remove("active");
       }
     });
-    dropdown.classList.toggle('active');
+    dropdown.classList.toggle("active");
   });
 });
 
-
-const menuIcon = document.querySelector('.menu-icon');
-const menuItems = document.querySelector('.menu');
+const menuIcon = document.querySelector(".menu-icon");
+const menuItems = document.querySelector(".menu");
 
 function toggleMenu() {
-  menuIcon.classList.toggle('open');
-  menuItems.classList.toggle('open');
+  menuIcon.classList.toggle("open");
+  menuItems.classList.toggle("open");
 }
 
-menuIcon.addEventListener('click', toggleMenu);
+menuIcon.addEventListener("click", toggleMenu);
 
-document.addEventListener('DOMContentLoaded', function() {
-  var galleryContainer = document.getElementById('galleryContainer');
-  var paginationContainer = document.getElementById('paginationContainer');
+document.addEventListener("DOMContentLoaded", function () {
+  var galleryContainer = document.getElementById("galleryContainer");
+  var paginationContainer = document.getElementById("paginationContainer");
 
   // Obtener la lista de imágenes en la carpeta "img"
-  fetch('./img')
-    .then(response => response.text())
-    .then(data => {
+  fetch("./img")
+    .then((response) => response.text())
+    .then((data) => {
       // Crear un elemento HTML para cada imagen encontrada
       var parser = new DOMParser();
-      var htmlDocument = parser.parseFromString(data, 'text/html');
-      var imageElements = htmlDocument.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".gif"]');
+      var htmlDocument = parser.parseFromString(data, "text/html");
+      var imageElements = htmlDocument.querySelectorAll(
+        'a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".gif"]'
+      );
 
       // Convertir la lista de imágenes en un array
-      var images = Array.from(imageElements).map(function(imageElement) {
-        return imageElement.getAttribute('href');
+      var images = Array.from(imageElements).map(function (imageElement) {
+        return imageElement.getAttribute("href");
       });
 
       // Definir la cantidad de imágenes por página
@@ -53,18 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
         var endIndex = page * imagesPerPage - 1;
 
         // Limpiar el contenedor de la galería
-        galleryContainer.innerHTML = '';
+        galleryContainer.innerHTML = "";
 
         // Iterar sobre las imágenes y agregarlas al contenedor de la galería
         for (var i = startIndex; i <= endIndex && i < images.length; i++) {
           var imageSrc = images[i];
 
-          var pictureDiv = document.createElement('div');
-          pictureDiv.className = 'picture';
+          var pictureDiv = document.createElement("div");
+          pictureDiv.className = "picture";
 
-          var img = document.createElement('img');
+          var img = document.createElement("img");
           img.src = imageSrc;
-          img.alt = 'Imagen de galería';
+          img.alt = "Imagen de galería";
 
           pictureDiv.appendChild(img);
           galleryContainer.appendChild(pictureDiv);
@@ -76,24 +77,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Función para actualizar la paginación
       function updatePagination() {
-        paginationContainer.innerHTML = '';
+        paginationContainer.innerHTML = "";
 
         // Agregar enlaces para cada página
         for (var i = 1; i <= totalPages; i++) {
-          var pageLink = document.createElement('a');
-          pageLink.href = '#';
+          var pageLink = document.createElement("a");
+          pageLink.href = "#";
           pageLink.textContent = i;
 
           // Asignar un evento de clic para mostrar las imágenes de la página seleccionada
-          pageLink.addEventListener('click', function() {
+          pageLink.addEventListener("click", function () {
             // Remover la clase "active" de todos los enlaces de paginación
-            var paginationLinks = paginationContainer.querySelectorAll('a');
-            paginationLinks.forEach(function(link) {
-              link.classList.remove('active');
+            var paginationLinks = paginationContainer.querySelectorAll("a");
+            paginationLinks.forEach(function (link) {
+              link.classList.remove("active");
             });
 
             // Agregar la clase "active" al enlace de paginación seleccionado
-            this.classList.add('active');
+            this.classList.add("active");
 
             showImages(parseInt(this.textContent));
           });
@@ -102,15 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Agregar la clase "active" al primer enlace de paginación por defecto
-        var firstPageLink = paginationContainer.querySelector('a');
-        firstPageLink.classList.add('active');
+        var firstPageLink = paginationContainer.querySelector("a");
+        firstPageLink.classList.add("active");
       }
 
       // Asignar el evento de clic a las imágenes de la galería
       function assignClickEventToImages() {
-        var galleryImages = galleryContainer.querySelectorAll('.picture img');
-        galleryImages.forEach(function(image) {
-          image.addEventListener('click', function() {
+        var galleryImages = galleryContainer.querySelectorAll(".picture img");
+        galleryImages.forEach(function (image) {
+          image.addEventListener("click", function () {
             var imageSrc = this.src;
             showImageFullscreen(imageSrc);
           });
@@ -123,29 +124,29 @@ document.addEventListener('DOMContentLoaded', function() {
       // Actualizar la paginación
       updatePagination();
     })
-    .catch(error => {
-      console.error('Error al obtener la lista de imágenes: ', error);
+    .catch((error) => {
+      console.error("Error al obtener la lista de imágenes: ", error);
     });
 
   // Función para mostrar una imagen en pantalla completa al hacer clic en ella
   function showImageFullscreen(imageSrc) {
     // Crear un contenedor para la imagen en pantalla completa
-    var fullscreenContainer = document.createElement('div');
-    fullscreenContainer.className = 'fullscreen-container';
+    var fullscreenContainer = document.createElement("div");
+    fullscreenContainer.className = "fullscreen-container";
 
     // Crear la imagen en pantalla completa
-    var fullscreenImage = document.createElement('img');
+    var fullscreenImage = document.createElement("img");
     fullscreenImage.src = imageSrc;
-    fullscreenImage.alt = 'Imagen en pantalla completa';
+    fullscreenImage.alt = "Imagen en pantalla completa";
 
     // Agregar la imagen al contenedor
     fullscreenContainer.appendChild(fullscreenImage);
 
     // Agregar el contenedor a la página
-    document.body.appendChild(fullscreenContainer); 
+    document.body.appendChild(fullscreenContainer);
 
     // Remover la imagen en pantalla completa al hacer clic en ella
-    fullscreenContainer.addEventListener('click', function() {
+    fullscreenContainer.addEventListener("click", function () {
       document.body.removeChild(fullscreenContainer);
     });
   }
